@@ -20,7 +20,7 @@ const Editor = ({ language, value, setEditorState }) => {
   return (
     <div className="editor-container">
       <div style={{ marginBottom: "10px" }}>
-        <label for="cars">Choose a theme: </label>
+        <label>Choose a theme: </label>
         <select
           name="theme"
           onChange={(el) => {
@@ -28,7 +28,9 @@ const Editor = ({ language, value, setEditorState }) => {
           }}
         >
           {themeArray.map((theme) => (
-            <option value={theme}>{theme}</option>
+            <option value={theme} key={theme}>
+              {theme}
+            </option>
           ))}
         </select>
       </div>
